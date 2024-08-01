@@ -12,16 +12,17 @@ code {
     monospace;
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0;
 }
-ul li{
-  padding:5px !important;
+
+ul li {
+  padding: 5px !important;
 }
 
-button{
-  color:#00000099 !important;
+button {
+  color: #00000099 !important;
 }
 
 
@@ -61,3 +62,31 @@ button{
 #searchQuerySubmit:hover {
   cursor: pointer;
 }
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  }
+
+  .pointer{
+    cursor: pointer;
+  }
+
+  .MuiCardHeader-title{
+    overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  }
+  
+  .MuiCardContent-root{
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
