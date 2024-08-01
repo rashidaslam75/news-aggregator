@@ -1,11 +1,11 @@
 
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { NEWS_API_KEY } from "../constant/app.constant";
+import { environments } from "../environments/environment";
 
 const headers: Readonly<Record<string, string | boolean>> = {
   Accept: "application/json",
-  "X-Api-Key": NEWS_API_KEY,
-  "Authorization": NEWS_API_KEY,
+  "X-Api-Key": environments.NEWS_API_KEY,
+  "Authorization": environments.NEWS_API_KEY,
 };
 
 class NewsApiInterceptorService {

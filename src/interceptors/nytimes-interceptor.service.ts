@@ -1,6 +1,5 @@
 
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import { NEWS_API_KEY } from "../constant/app.constant";
 
 const headers: Readonly<Record<string, string | boolean>> = {
   Accept: "application/json"

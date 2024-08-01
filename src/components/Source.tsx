@@ -1,14 +1,14 @@
 import { Avatar, Box, Button, Link, Stack } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import { Source } from '../interfaces/Source';
-import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import { storageService } from '../services/storage.service';
 import { useEffect, useState } from 'react';
-import MarkChatReadIcon from '@mui/icons-material/MarkChatRead';
 import { toasterService } from '../services/toaster.service';
 import { STORAGE_KEYS } from '../constant/app.constant';
 import { newsService } from '../services/news.service';
 import ListSkeleton from '../skeleton/ListSkeleton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export default function Sources() {
   const [favourites, setFavourites] = useState<string[]>([]);
@@ -93,11 +93,11 @@ export default function Sources() {
               <li>
                 <Stack direction={"row"} >
                   <Box width={"100%"} sx={{ display: "flex" }}>
-                    <Avatar sx={{ bgcolor: deepOrange[500], height: 30, width: 30 }}>R</Avatar>
+                    <Avatar sx={{ bgcolor: deepOrange[500], height: 30, width: 30 }}>A</Avatar>
                     <Button target="_blank" href={item.link}>{item.name}</Button>
                   </Box>
-                  {isBookMark(item.url) ? <MarkChatReadIcon className='pointer' onClick={() => onRemoveFavourite(item.url)} />
-                    : <BookmarkAddIcon className='pointer' onClick={() => onAddFavourite(item.url)} />}
+                  {isBookMark(item.url) ? <FavoriteIcon className='pointer' onClick={() => onRemoveFavourite(item.url)} />
+                    : <FavoriteBorderIcon className='pointer' onClick={() => onAddFavourite(item.url)} />}
 
                 </Stack> </li>
             ))}

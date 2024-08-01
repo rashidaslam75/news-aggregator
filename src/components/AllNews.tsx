@@ -13,7 +13,7 @@ const AllNews = () => {
 
     const getNews = (params?: { query: string }) => {
         setLoading(true)
-        const newsAPI = newsService.getNews(params,20);
+        const newsAPI = newsService.getNews(params,40);
         const guardianAPI = guardianService.getNews(params);
         const nyTimesAPI = nyTimesService.getNews(params);
         const promises = [newsAPI, guardianAPI,nyTimesAPI];
