@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Chip, Grid, Stack, Typography } from '@mui/material';
+import { Box,  Grid,  Typography } from '@mui/material';
 import NewsCard from './NewsCard';
 import { newsService } from '../services/news.service';
 import NewsSkeleton from '../skeleton/NewsSkeleton';
@@ -19,7 +19,6 @@ const MyFeed = () => {
             }).catch((error: any) => {
                 console.log(error)
             })
-
     }
 
     React.useEffect(() => {
@@ -27,7 +26,6 @@ const MyFeed = () => {
         let query: string = '';
         let parsedData: string[]
         const sources: any = storageService.getItem(STORAGE_KEYS.SOURCES)
-        const categories: any = storageService.getItem(STORAGE_KEYS.CATEGORIES)
 
         parsedData = sources?.length > 0 ? JSON.parse(sources) : null
         if (parsedData && parsedData.length > 0) {

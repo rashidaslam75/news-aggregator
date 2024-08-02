@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { newsService } from '../services/news.service';
-import { Box, Button, Link, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import { Article } from '../interfaces/Article';
 import StorySkeleton from '../skeleton/StorySkeleton';
 

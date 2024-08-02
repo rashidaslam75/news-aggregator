@@ -11,14 +11,6 @@ class GuardianService {
         url += `&q=${query}`;
         return await guardianInterceptor.get(url);
     }
-    async getFeed(query?: string) {
-        let url = `search?sectionapi-key=${environments.GUARDIAN_API_KEY}&${query}`;
-        return await guardianInterceptor.get(url);
-    }
-    async getCategory() {
-        let url = `sections?api-key=${environments.GUARDIAN_API_KEY}`;
-        return await guardianInterceptor.get(url);
-    }
 }
 
 export const guardianService = new GuardianService();

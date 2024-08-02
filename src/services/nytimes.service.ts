@@ -9,7 +9,6 @@ class NyTimesService {
             query = params.query;
         }
         url += `&q=${query}`;
-       
         return await nyTimesInterceptor.get(url);
     }
   
