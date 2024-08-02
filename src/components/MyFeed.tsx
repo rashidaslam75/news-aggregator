@@ -39,7 +39,7 @@ const MyFeed = () => {
 
     return (
         <div>
-            {articles?.length == 0 && !loading && (
+            {articles?.length === 0 && !loading && (
                 <Box sx={{ display: "flex", width: '100%', justifyContent: "center" }}>
                     <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
                         <Typography variant="h6" textAlign={'center'} gutterBottom>

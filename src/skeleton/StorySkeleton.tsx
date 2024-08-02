@@ -1,4 +1,4 @@
-import { Avatar, Box, Skeleton, Typography } from '@mui/material'
+import { Avatar, Box, Skeleton } from '@mui/material'
 
 const StorySkeleton = () => {
     return (
