@@ -35,7 +35,7 @@ const TopStories = () => {
             ))}
             {!loading && articles.map((article: Article) => (
                 <Box margin={"20px 0"} display={"flex"}>
-                    <img src={article.urlToImage} width={"30%"} />&nbsp;&nbsp;
+                    <img src={article.urlToImage} alt='image' width={"30%"} />&nbsp;&nbsp;
                     <Box display={"flex"} flexDirection={'column'} alignItems={'start'}>
                         <Typography variant="body2" color="text.secondary">
                             {article.title}

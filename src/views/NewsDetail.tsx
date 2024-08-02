@@ -35,7 +35,7 @@ const NewsDetail = () => {
                         <strong>Published on:</strong>  {format(date, 'yyyy/MM/dd')}
                     </Typography>
                     <Box margin={"20px 0"}>
-                        <img src={imageUrl} width={'100%'} />
+                        <img src={imageUrl} alt='image' width={'100%'} />
                     </Box>
                     <Typography variant="body1" component="h5">
                         {content}
