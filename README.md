@@ -1,4 +1,4 @@
-# News Aggregator
+# Docker Deployment Process
 
 Running a React.js project within a Docker container involves several steps, including creating a Dockerfile, setting up a Docker Compose file (optional but recommended for managing multi-container applications), and running the Docker container. Below is a step-by-step guide to help you through this process.
 
