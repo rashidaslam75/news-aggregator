@@ -57,10 +57,10 @@ export default function FilterDialog({ handleClose, onSubmit }: { handleClose: a
         </DialogTitle>
         <DialogContent>
           <Grid container spacing={2}>
-            <Grid item md={6}>
+            <Grid item md={6} xs={12}>
               <TextField fullWidth value={keyword} name="keyword" onChange={(e) => setKeyword(e.target.value)} label="Keword" variant="outlined" />
             </Grid>
-            <Grid item md={6}>
+            <Grid item md={6} xs={12}>
               <TextField
                 select
                 fullWidth
@@ -76,12 +76,12 @@ export default function FilterDialog({ handleClose, onSubmit }: { handleClose: a
               </TextField>
             </Grid>
 
-            <Grid item md={6}>
+            <Grid item md={6} xs={12}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker label="From" minDate={dayjs('2024-07-02')} className='datepicker' value={fromDate} onChange={(newValue) => setFromDate(newValue)} />
               </LocalizationProvider>
             </Grid>
-            <Grid item md={6}>
+            <Grid item md={6} xs={12}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker disableFuture={true} minDate={fromDate} label="To" className='datepicker' value={toDate} onChange={(newValue) => SetToDate(newValue)} />
               </LocalizationProvider>
