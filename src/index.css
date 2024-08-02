@@ -30,6 +30,7 @@ button {
 .wrapper {
   width: 100%;
   max-width: 31.25rem;
+  margin-right: 10px;
 }
 
 .searchBar {
@@ -89,4 +90,8 @@ button {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .datepicker{
+    width: 100%;
   }

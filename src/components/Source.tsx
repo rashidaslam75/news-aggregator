@@ -1,4 +1,4 @@
-import { Avatar, Box, Button,  Stack } from '@mui/material';
+import { Avatar, Box, Button, Stack } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import { Source } from '../interfaces/Source';
 import { storageService } from '../services/storage.service';
@@ -69,6 +69,7 @@ export default function Sources() {
           return { ...item, link: item.url, url };
         })
         setSources(sources);
+        storageService.setItem('SOURCE_LIST', JSON.stringify(sources))
       }).catch((error: any) => {
         console.log(error)
       })
@@ -82,7 +83,7 @@ export default function Sources() {
   return (
     <>
       {loading && (
-        [1,2,3,4,5,6,7,8].map(item=>(
+        [1, 2, 3, 4, 5, 6, 7, 8].map(item => (
           <ListSkeleton />
         ))
       )}
@@ -90,7 +91,7 @@ export default function Sources() {
         <>
           <ul>
             {sources.map((item: Source) => (
-              <li>
+              <li key={item.id}>
                 <Stack direction={"row"} >
                   <Box width={"100%"} sx={{ display: "flex" }}>
                     <Avatar sx={{ bgcolor: deepOrange[500], height: 30, width: 30 }}>A</Avatar>

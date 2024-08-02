@@ -3,12 +3,13 @@ import { newsService } from '../services/news.service';
 import { Box, Link, Typography } from '@mui/material';
 import { Article } from '../interfaces/Article';
 import StorySkeleton from '../skeleton/StorySkeleton';
+import { ISearch } from '../interfaces/Search';
 
 const TopStories = () => {
     const [articles, setArticles] = useState<any[]>([])
     const [loading, setLoading] = useState(false)
 
-    const getNews = (params?: { query: string }) => {
+    const getNews = (params: ISearch) => {
         setLoading(true)
 
         newsService.getNews(params, 10).then((response: any) => {
@@ -21,7 +22,7 @@ const TopStories = () => {
     }
 
     React.useEffect(() => {
-        getNews()
+        getNews({})
 
     }, [])
 
